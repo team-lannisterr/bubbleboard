@@ -9,22 +9,33 @@
  * ************************************
  */
 
-import * as types from '../constants/actionTypes';
+import * as types from "../constants/actionTypes";
+import RJSON from "relaxed-json";
 
 const initialState = {
   inputJSON: {},
+  inputString: "",
+  renderBoard: false
 };
 
-
-const marketsReducer = (state=initialState, action) => {
-  const stateCopy = JSON.parse(JSON.stringify(state));
-
-  switch(action.type) {
+const bubbleReducer = (state = initialState, action) => {
+  switch (action.type) {
     case types.LOAD_BUBBLES:
-      break;
+      console.log('bubblifying: ', state.inputString);
+      let inputJSON = RJSON.parse(state.inputString);
+      return {...state,
+        inputJSON,
+        renderBoard: true
+      };
+    case types.INPUT_CHANGE:
+      console.log('newState.inputString: ', action.payload)
+      return { ...state,
+        inputString: action.payload,
+        renderBoard: false
+      };
     default:
       return state;
   }
 };
 
-export default marketsReducer;
+export default bubbleReducer;
