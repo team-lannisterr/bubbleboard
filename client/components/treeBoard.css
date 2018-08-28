@@ -1,0 +1,14 @@
+.node circle {
+	fill: white;
+    stroke: black;
+    width: 20px;
+}
+
+path.link {
+	fill: none;
+	stroke: white;
+}
+
+.nodeText {
+    color: white;
+}
