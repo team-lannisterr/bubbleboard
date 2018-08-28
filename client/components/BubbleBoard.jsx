@@ -11,7 +11,7 @@ const BubbleBoard = (props) => {
 
     let theObject = props.object;
 
-    if(!props.object){theObject = {
+    if (!props.object){theObject = {
       'of': {heaven: 'tongues'},
       'are': 'fencing',
       'too': {'many': ['leaves', {'in the':'city'}]},
@@ -48,8 +48,8 @@ const BubbleBoard = (props) => {
       
       let keys = Object.keys(ob);
   
-      for(let key of keys){
-        if(typeof ob[key] === 'object'){
+      for (let key of keys){
+        if (typeof ob[key] === 'object'){
           let newBubble = bubbleify(ob[key]);
   
           newBubble.parent = ob;
@@ -66,15 +66,14 @@ const BubbleBoard = (props) => {
       }
       
       return bubble;
-  
-    }
+  }
   
     const nodeify = (bubble) => {
       let thisNode = {id: nodes.length, nodeLabel: bubble.key, color:'#333333'}
-      if(bubble.data){thisNode.nodeLabel += ' : '+bubble.data}
-      if(thisNode.nodeLabel === undefined){thisNode.nodeLabel = props.name};
+      if (bubble.data){thisNode.nodeLabel += ' : '+bubble.data}
+      if (thisNode.nodeLabel === undefined){thisNode.nodeLabel = props.name};
       nodes.push(thisNode);
-      for(let i = 0; i < bubble.children.length; i++){
+      for (let i = 0; i < bubble.children.length; i++){
         let childNode = nodeify(bubble.children[i])
         let link = {source: thisNode.id,
                     target: childNode.id};
@@ -91,7 +90,7 @@ const BubbleBoard = (props) => {
       bubble.parent = parent;
       bubble.offsets = {x: offsetX, y: offsetY}
   
-      if(bubble.parent){
+      if (bubble.parent) {
         bubble.pos = {x: bubble.parent.pos.x + bubble.offsets.x,
                     y: bubble.parent.pos.y + bubble.offsets.y};
       }
