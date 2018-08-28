@@ -4,15 +4,19 @@ const passport = require('passport');
 const authRoutes = require('./auth-routes');
 const profileRoutes = require('./profile-routes');
 const passportSetup = require('./passport-setup');
-const keys = require('./keys');
+// const keys = require('./keys');
 const path = require('path');
 const db = require('./models/db');
 const app = express();
 
-app.use(cookieSession({
-    maxAge: 24 * 60 * 60 * 1000,
-    keys: [keys.session.cookieKey]
-}));
+
+//.keys file holds API keys, must add from google. 
+//also holds database link. slack @jc for more information
+
+// app.use(cookieSession({
+//     maxAge: 24 * 60 * 60 * 1000,
+    // keys: [keys.session.cookieKey]
+// }));
 
 app.use(express.static(__dirname + './../'));
 app.use(passport.initialize());
