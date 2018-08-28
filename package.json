@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Visualize your data structure into a bubble map",
   "main": "index.js",
-  "babel":{
-    "plugins": ["transform-object-rest-spread"],
-    "ignore": ["/node_modules/"]
+  "babel": {
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
+    "ignore": [
+      "/node_modules/"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,11 +39,14 @@
   "homepage": "https://github.com/slaglebagel17/bubbleboard#readme",
   "dependencies": {
     "concurrently": "^3.6.1",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "konva": "^2.2.2",
     "matter-js": "^0.14.2",
     "mongoose": "^5.2.9",
     "nodemon": "^1.18.3",
+    "passport-local": "^1.0.0",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",

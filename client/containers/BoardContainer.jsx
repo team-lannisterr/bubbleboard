@@ -4,7 +4,6 @@ import { Well } from 'react-bootstrap';
 import BubbleBoard from '../components/BubbleBoard.jsx'
 
 
-
 class BoardContainer extends Component {
   constructor(props) {
     super(props);
