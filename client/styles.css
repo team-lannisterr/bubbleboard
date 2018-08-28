@@ -40,3 +40,12 @@ body{
   display: flex;
   justify-content: center;
 }
+  
+  .user-login {
+    height: 300px;
+    width: 300px;
+  }
+  
+  button {
+    margin-left: 29px; 
+  }

@@ -25,6 +25,7 @@ app.use(passport.session());
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
 });
