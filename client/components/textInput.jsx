@@ -1,9 +1,7 @@
-
-
 import React, { Component } from 'react';
 
 const textInput = (props) => {
-    let el =
+    return (
     <div>
         <form onSubmit={(event)=>{
             event.preventDefault();
@@ -13,7 +11,7 @@ const textInput = (props) => {
             <input type='submit' value='IMPORT'/>
         </form>
     </div>
-    return el;
+    )  
 }
 
 export default textInput;

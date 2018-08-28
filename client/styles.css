@@ -1,35 +1,41 @@
-#app{
-  margin:auto;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  width:100%;
-  height:84vh;
+* {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
 
-body{
-  background: black;
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, rgba(43, 75, 111, 0.4),  rgba(174, 187, 201, 0.4), rgba(232, 232, 232, 0.4))
 }
 
 #main {
-  display: flex;
-  align-content: center;
-  height: 80vh;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app{
+  background-image: url('../image/one.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body{
+  background: #f4f4f4;
 }
 
 #sidebar {
-  width: 25%;
-  background: lightblue;
-  height: 100%;
+  width: 20vw;
+  background: rgba(89, 153, 203, 0.5);
+  height: 85vh;
 }
 
 #boardContainer {
-  background: black;
-  width: 75%;
-  height: 100%;
-  margin-left:10px;
-  margin-right: 10px;
+  background: rgba(250, 250, 250, 0.9);
+  width: 75vw;
+  height: 85vh;
 }
 
 #import {
@@ -49,3 +55,28 @@ body{
   button {
     margin-left: 29px; 
   }
+
+.flexRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textTitle {
+  color: white;
+  font-size: 1.2em;
+}
+
+.textInput {
+  height: 55vh;
+  width: 18vw;
+  resize: none;
+  text-align: left;
+}
