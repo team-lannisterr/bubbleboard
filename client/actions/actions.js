@@ -25,3 +25,11 @@ export const inputChange = (string) =>{
     payload: string,
   }
 }
+
+export const loadUserBubbleBoards = (object) =>  {
+  //triggers reducer that will will fetch user data from server. 
+  return{
+    type: types.LOAD_USER_BUBBLEBOARDS,
+    payload: object, 
+  }
+}
