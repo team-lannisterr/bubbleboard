@@ -102,7 +102,7 @@ const BubbleBoard = props => {
   let el = (
     <ForceGraph2D
       graphData={bubbleData}
-      backgroundColor="#000000"
+      backgroundColor="#003434"
       width={600}
       height={400}
       nodeRelSize={10}
