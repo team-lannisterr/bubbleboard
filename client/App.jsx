@@ -20,7 +20,9 @@ class App extends Component {
   render() {
     return(
       <div id="app">
-        <Main />
+        <div className='overlay'>
+          <Main />
+        </div>
       </div>
     )
   }

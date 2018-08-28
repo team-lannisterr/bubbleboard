@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Well } from "react-bootstrap";
+import { Well, Button } from "react-bootstrap";
 
 //CHILDREN
 import InputField from "../components/InputField.jsx";
@@ -14,18 +14,18 @@ class Sidebar extends Component {
   render() {
     const {} = this.props;
     return (
-      <Well id="sidebar">
-        <h2>bbblbrd</h2>
+      <Well id="sidebar" className='flexColumn'>
         <InputField
           onSubmitHandler={this.props.onSubmit}
           onChangeHandler={this.props.onChange}
         />
+        <Button>Switch Table View</Button>
       </Well>
     );
   }
 }
 
-const mapStateToProps = store => ({
+const mapStateToProps = store => ({ 
   //provide pertinent state here
 });
 
