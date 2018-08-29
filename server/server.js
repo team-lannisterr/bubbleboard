@@ -22,7 +22,7 @@ const app = express();
 
 app.use(express.static(__dirname + './../'));
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-    db.find({}, ((err, items) => {
+    UserInfo.find({}, ((err, items) => {
         if(err) return res.status(500).send(err);
 
         res.status(200).send(items);
