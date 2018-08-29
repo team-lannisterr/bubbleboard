@@ -1,6 +1,12 @@
 const router = require('express').Router();
 const passport = require('passport');
 
+// route login
+router.get('/login', (req, res) => {
+    res.send(`i'm here`);
+})
+
+
 router.get('/login', (req, res) => {
     // res.render('login', { user: req.user });
     res.send('hello');
@@ -24,3 +30,5 @@ router.get('/logout', (req, res) => {
 module.exports = router;
 
 // res.sendFile(path.join(__dirname, '../index2.html'))
+
+// module.exports = router;
