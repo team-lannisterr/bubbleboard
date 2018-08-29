@@ -4,7 +4,6 @@ import { Well } from 'react-bootstrap';
 import BubbleBoard from '../components/BubbleBoard.jsx';
 import TreeBoard from '../components/treeBoard.jsx';
 
-
 class BoardContainer extends Component {
   constructor(props) {
     super(props);
@@ -17,28 +16,31 @@ class BoardContainer extends Component {
 
   componentDidUpdate(prevProps,prevState){
     console.log('updated board container!');
+    
   }
 
   render() {
+    console.log('number of boards' + this.props.numberOfBoards)
     return(
       <Well id="boardContainer">
       { true ? (
-        <BubbleBoard object = {this.props.inputData} name={'Test Data'}/>
+        <BubbleBoard object = {this.props.inputData} 
+        rootName={this.props.rootName} numberOfBoards={this.props.numberOfBoards} name={'Test Data'}/>
       ) : (
         <TreeBoard object = {this.props.inputData} />
       )}
       </Well>
     )
   }
-
-
 }
 
 const mapStateToProps = store => ({
   //provide pertinent state here
   inputData: store.bubble.inputJSON,
   hasNewInput: store.bubble.renderBoard,
-  flipped: store.bubble.flipped
+  flipped: store.bubble.flipped,
+  rootName: store.bubble.rootName,
+  numberOfBoards: store.bubble.numberOfBoards
 });
 
 const mapDispatchToProps = dispatch => ({
