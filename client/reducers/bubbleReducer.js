@@ -15,8 +15,7 @@ import RJSON from "relaxed-json";
 const initialState = {
   inputJSON: {},
   inputString: "",
-  renderBoard: false,
-  boards: [], 
+  renderBoard: false
 };
 
 const bubbleReducer = (state = initialState, action) => {

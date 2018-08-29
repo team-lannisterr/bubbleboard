@@ -1,4 +1,5 @@
 import * as types from "../constants/actionTypes";
+import UserContainer from '../containers/UserContainer.jsx'; 
 
 
 
@@ -6,20 +7,20 @@ import * as types from "../constants/actionTypes";
 
 
 
-// // const initialState = {
-// //     boards: [], 
-// // }
+const initialState = {
+    boards: [], 
+}
     
 
+const UserDashboardReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case types.STORE_USER_DATA:
+        return {...state, 
+          boards: mapDispatchToProps.storeUserData(userInformation), 
+        }
+    };
+}
 
-// // const UserdashboardReducer = (state = initialState, action) => {
-// //     switch (action.type) {
-// //       case types.LOAD_USER_BOARDS
-      
-
-// //     }; 
-// // }
 
 
-
-// export default UserdashboardReducer; 
+export default UserDashboardReducer; 
