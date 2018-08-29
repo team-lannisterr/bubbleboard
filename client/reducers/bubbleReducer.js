@@ -24,6 +24,7 @@ const initialState = {
 
 const bubbleReducer = (state = initialState, action) => {
   let numberOfBoards;
+  console.log(action)
 
   switch (action.type) {
     case types.LOAD_BUBBLES:
