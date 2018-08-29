@@ -14,14 +14,17 @@ passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
-// passport.use(new GoogleStrategy({
-//     callbackURL: '/auth/google/redirect',
-//     clientID: process.env.CLIENT_ID,
-//     clientSecret: process.env.CLIENT_SECRET 
-//   }, 
-//   (token, refreshToken, profile, done) => {
-//     // passport callback
-
-//   }
-// ))
+passport.use(new GoogleStrategy({
+    callbackURL: '/auth/google/redirect',
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET 
+  }, 
+  (token, refreshToken, profile, done) => {
+    // passport callback
+    return done(null, {
+      profile: profile,
+      token: token
+    })
+  }
+))
 
