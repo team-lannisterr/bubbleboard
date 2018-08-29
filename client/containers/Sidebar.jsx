@@ -25,7 +25,7 @@ class Sidebar extends Component {
           //rootName={this.props.rootName} not sure if needed
           />
         <AddBoard addBoard={this.props.onBoardAdd} onSubmitHandler={this.props.onSubmit}></AddBoard>
-        <Button>Switch Table View</Button>
+        <Button onClick={this.props.handleCardFlip}>Switch Table View</Button>
       </Well>
     );
   }
@@ -45,7 +45,9 @@ const mapDispatchToProps = dispatch => ({
   onChange: event => {
     dispatch(actions.inputChange(event.target.value));
   },
-  handleCardFlip: () => dispatch(actions.handleFlip()),
+  handleCardFlip: () => {
+    dispatch(actions.handleCardFlip())
+  },
   onRootChange: event => {
     dispatch(actions.rootChange(event.target.value));
   },

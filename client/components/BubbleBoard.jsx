@@ -141,8 +141,6 @@ const BubbleBoard = props => {
       thisNode.nodeLabel += " : " + bubble.data;
     }
     if (thisNode.nodeLabel === undefined) {
-      console.log("Look here greg for number of boards" + props.numberOfBoards)
-
       thisNode.nodeLabel = props.rootName || 'Root';
     }
     nodes.push(thisNode);

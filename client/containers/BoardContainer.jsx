@@ -10,20 +10,16 @@ class BoardContainer extends Component {
   }
 
   shouldComponentUpdate(nextState,nextProps){
-    console.log('sCompUp? next state: ', nextState);
     return nextState.hasNewInput;
   }
 
   componentDidUpdate(prevProps,prevState){
-    console.log('updated board container!');
-    
   }
 
   render() {
-    console.log('number of boards' + this.props.numberOfBoards)
     return(
       <Well id="boardContainer">
-      { true ? (
+      { this.props.flipped ? (
         <BubbleBoard object = {this.props.inputData} 
         rootName={this.props.rootName} numberOfBoards={this.props.numberOfBoards} name={'Test Data'}/>
       ) : (
