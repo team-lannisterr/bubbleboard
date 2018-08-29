@@ -15,14 +15,10 @@ import RJSON from "relaxed-json";
 const initialState = {
   inputJSON: {},
   inputString: "",
-<<<<<<< HEAD
-  renderBoard: false
-=======
   renderBoard: false,
   rootName: '',
   numberOfBoards: 1,
   boards: [], 
->>>>>>> ef71332e89d8a0281bba53e7defdcb1d1bf7ef13
 };
 
 const bubbleReducer = (state = initialState, action) => {
