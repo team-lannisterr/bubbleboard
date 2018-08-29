@@ -15,9 +15,10 @@ const TreeBoard = props => {
     let data2 = {
         test: 1
     };
-
+    // console.log('here', props.object)
+    // console.log(data)
     return (
-            <Tree data={data} height={400} width={400} animated={true} 
+            <Tree data={props.object} height={400} width={400} animated={true} 
             textProps={{class:'nodeText'}}/>
     )
 }

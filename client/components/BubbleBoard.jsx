@@ -193,21 +193,20 @@ const BubbleBoard = props => {
     nodes,
     links
   };
-  function outer(){
-  let forceGraph = <ForceGraph2D
+
+  let el = (
+    <ForceGraph2D
     graphData={bubbleData}
     // backgroundColor="#003434"
-    
     width={1000}
     height={600}
     nodeRelSize={10}
     linkWidth={8}
-    linkColor="#F1CD7D"
-    nodeColor={{color: "#C56698"}}
+    // linkColor="#F1CD7D"
+    // nodeColor={{color: "#C56698"}}
     //runs function for every node 
     nodeCanvasObject={(node, ctx, globalScale) => {
       const label = node.nodeLabel;
-      console.log(props.numberOfBoards)
       const fontSize = 12 / Math.sqrt(globalScale);
       ctx.font = `${fontSize}px Sans-Serif`;
       const textWidth = ctx.measureText(label).width;
@@ -224,12 +223,7 @@ const BubbleBoard = props => {
       ctx.fillText(label, node.x, node.y);
     }}
   />
-  }
-
-  let el = (
-    outer()
   );
-
   return el;
 };
 

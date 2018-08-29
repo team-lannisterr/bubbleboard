@@ -39,15 +39,13 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   // create functions that will dispatch action creators
   onSubmit: event => {
-    console.log("event.target: ", event.target);
     event.preventDefault();
     dispatch(actions.loadJSON());
   },
   onChange: event => {
-    console.log("changing");
-
     dispatch(actions.inputChange(event.target.value));
   },
+  handleCardFlip: () => dispatch(actions.handleFlip()),
   onRootChange: event => {
     dispatch(actions.rootChange(event.target.value));
   },

@@ -38,6 +38,7 @@ const mapStateToProps = store => ({
   //provide pertinent state here
   inputData: store.bubble.inputJSON,
   hasNewInput: store.bubble.renderBoard,
+  flipped: store.bubble.flipped,
   rootName: store.bubble.rootName,
   numberOfBoards: store.bubble.numberOfBoards
 });
