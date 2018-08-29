@@ -37,7 +37,8 @@ class BoardContainer extends Component {
 const mapStateToProps = store => ({
   //provide pertinent state here
   inputData: store.bubble.inputJSON,
-  hasNewInput: store.bubble.renderBoard
+  hasNewInput: store.bubble.renderBoard,
+  flipped: store.bubble.flipped
 });
 
 const mapDispatchToProps = dispatch => ({

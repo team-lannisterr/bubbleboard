@@ -12,6 +12,7 @@ class Sidebar extends Component {
   }
 
   render() {
+    console.log(this.state.flipped)
     const {} = this.props;
     return (
       <Well id="sidebar" className='flexColumn'>
@@ -19,7 +20,7 @@ class Sidebar extends Component {
           onSubmitHandler={this.props.onSubmit}
           onChangeHandler={this.props.onChange}
         />
-        <Button>Switch Table View</Button>
+        <Button onClick={this.props.handleCardFlip}>Switch Table View</Button>
       </Well>
     );
   }
@@ -32,15 +33,13 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch => ({
   // create functions that will dispatch action creators
   onSubmit: event => {
-    console.log("event.target: ", event.target);
     event.preventDefault();
     dispatch(actions.loadJSON());
   },
   onChange: event => {
-    console.log("changing");
-
     dispatch(actions.inputChange(event.target.value));
-  }
+  },
+  handleCardFlip: () => dispatch(actions.handleFlip())
 });
 
 export default connect(
