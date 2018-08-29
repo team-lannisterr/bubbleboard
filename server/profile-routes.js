@@ -13,4 +13,4 @@ router.get('/', authCheck, (req, res) => {
     res.send('hello');
 });
 
-module.exports = router;
+module.exports = router

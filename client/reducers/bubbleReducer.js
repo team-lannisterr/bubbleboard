@@ -17,7 +17,8 @@ const initialState = {
   inputString: "",
   renderBoard: false,
   rootName: '',
-  numberOfBoards: 1
+  numberOfBoards: 1,
+  boards: [], 
 };
 
 const bubbleReducer = (state = initialState, action) => {
