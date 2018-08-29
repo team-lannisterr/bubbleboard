@@ -17,13 +17,16 @@ class BoardContainer extends Component {
 
   componentDidUpdate(prevProps,prevState){
     console.log('updated board container!');
+    
   }
 
   render() {
+    console.log('number of boards' + this.props.numberOfBoards)
     return(
       <Well id="boardContainer">
       { true ? (
-        <BubbleBoard object = {this.props.inputData} name={'Test Data'}/>
+        <BubbleBoard object = {this.props.inputData} 
+        rootName={this.props.rootName} numberOfBoards={this.props.numberOfBoards} name={'Test Data'}/>
       ) : (
         <TreeBoard object = {this.props.inputData} />
       )}
@@ -37,7 +40,9 @@ class BoardContainer extends Component {
 const mapStateToProps = store => ({
   //provide pertinent state here
   inputData: store.bubble.inputJSON,
-  hasNewInput: store.bubble.renderBoard
+  hasNewInput: store.bubble.renderBoard,
+  rootName: store.bubble.rootName,
+  numberOfBoards: store.bubble.numberOfBoards
 });
 
 const mapDispatchToProps = dispatch => ({

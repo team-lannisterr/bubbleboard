@@ -3,14 +3,14 @@ import { FormGroup, ControlLabel, FormControl, Button } from "react-bootstrap";
 
 const InputField = props => {
   return (
-    <form onSubmit={props.onSubmitHandler}>
+    <form onSubmit={props.onSubmitHandler} >
       <FormGroup controlId="inputField">
         <ControlLabel bsClass='textTitle'>JSON Input</ControlLabel>
         <FormControl
             type="text"
-            // value={}
+            value={props.rootName}
             placeholder="Root Name"
-            onChange={props.onChangeHandler}
+            onChange={props.onRootChange}
           />
         <FormControl
           bsClass='textInput'
