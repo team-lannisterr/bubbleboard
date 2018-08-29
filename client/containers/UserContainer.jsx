@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-const URL = 'http://localhost:3000/data'
+
+
+
+//URL for UserData
+const URL = 'http://localhost:3000/'
 
 
 
@@ -28,3 +32,6 @@ class UserContainer extends Component {
       .catch(error => console.log(error)) 
   }
 }
+
+
+export default UserContainer; 

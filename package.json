@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/slaglebagel17/bubbleboard#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "concurrently": "^3.6.1",
     "express": "^4.16.3",
     "konva": "^2.2.2",
