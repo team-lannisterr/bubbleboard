@@ -47,6 +47,8 @@
     "mongoose": "^5.2.9",
     "nodemon": "^1.18.3",
     "passport-local": "^1.0.0",
+    "pg": "^7.4.3",
+    "pg-promise": "^8.4.6",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",

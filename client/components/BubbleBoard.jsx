@@ -102,11 +102,12 @@ const BubbleBoard = props => {
   let el = (
     <ForceGraph2D
       graphData={bubbleData}
-      backgroundColor="#000000"
+      backgroundColor="#003434"
       width={600}
       height={400}
       nodeRelSize={10}
       linkWidth={8}
+      //runs function for every node 
       nodeCanvasObject={(node, ctx, globalScale) => {
         const label = node.nodeLabel;
         const fontSize = 12 / Math.sqrt(globalScale);
