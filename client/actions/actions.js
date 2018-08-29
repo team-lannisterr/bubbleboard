@@ -26,6 +26,19 @@ export const inputChange = (string) =>{
   }
 }
 
+export const rootChange = (string) =>{
+  return{
+    type: types.ROOT_CHANGE,
+    payload: string,
+  }
+}
+
+export const addBoard  = (num) => {
+  return{
+    type: types.ADD_BOARD,
+    payload: num
+  }
+}
 
 export const loadUserBubbleBoards = (object) =>  {
   //triggers reducer that will will fetch user data from server. 

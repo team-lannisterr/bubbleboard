@@ -16,10 +16,14 @@ const initialState = {
   inputJSON: {},
   inputString: "",
   renderBoard: false,
+  rootName: '',
+  numberOfBoards: 1,
   boards: [], 
 };
 
 const bubbleReducer = (state = initialState, action) => {
+  let numberOfBoards;
+
   switch (action.type) {
     case types.LOAD_BUBBLES:
       console.log('bubblifying: ', state.inputString);
@@ -33,6 +37,18 @@ const bubbleReducer = (state = initialState, action) => {
       return { ...state,
         inputString: action.payload,
         renderBoard: false
+      };
+      case types.ROOT_CHANGE:
+      console.log('newState.inputString: ', action.payload)
+      return { ...state,
+        rootName: action.payload
+      };
+      case types.ADD_BOARD: 
+      console.log('adding new board', action.payload)
+      console.log('board ' + state.numberOfBoards)
+      numberOfBoards = state.numberOfBoards + 1;
+      return { ...state,
+        numberOfBoards
       };
     default:
       return state;
