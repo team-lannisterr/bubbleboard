@@ -3,8 +3,8 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const authRoutes = require('./auth-routes');
 const profileRoutes = require('./profile-routes');
-const passportSetup = require('./passport-setup');
 // const keys = require('./keys');
+const passportSetup = require('./passport-setup');
 const path = require('path');
 const db = require('./models/db');
 const auth = require('./auth.js');
@@ -25,7 +25,7 @@ const app = express();
 
 app.use(express.static(__dirname + './../'));
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 app.use('/auth', authRoutes);
 
