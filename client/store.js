@@ -19,6 +19,10 @@ const store = createStore(
   reducers,
   bubbleReducer, 
   composeWithDevTools()
+<<<<<<< HEAD
+=======
+
+>>>>>>> c039663b96750ea40c338991fe62d363bcb2647e
 );
 
 export default store;

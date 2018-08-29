@@ -4,7 +4,6 @@ import { Well } from 'react-bootstrap';
 import BubbleBoard from '../components/BubbleBoard.jsx';
 import TreeBoard from '../components/treeBoard.jsx';
 
-
 class BoardContainer extends Component {
   constructor(props) {
     super(props);
@@ -30,8 +29,6 @@ class BoardContainer extends Component {
       </Well>
     )
   }
-
-
 }
 
 const mapStateToProps = store => ({
