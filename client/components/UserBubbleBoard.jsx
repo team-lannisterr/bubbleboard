@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; 
 import { throws } from 'assert';
+import UserContainer from '../containers/UserContainer.jsx'
 
 
 
@@ -7,29 +8,13 @@ import { throws } from 'assert';
 
 
 
-
-
-
-
-class UserBubbleBoard extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            //Board will hold an array of objects, time created, user, project. 
-            boards: [{user: 'Me', board_id:'1213123131'}]
-        }
-    }
-
-
-  render() {
+const UserBubbleBoard = (props) => {
+  render()
     return(
-      <div> 
-        <UserBubbleBoardItem userInformation={this.props.boards} /> 
-      </div>  
+      <div>
+        <BubbleBoardItem /> 
+      </div>
     )
-  }
 }
-
 
 export default UserBubbleBoard; 
