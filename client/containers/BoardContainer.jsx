@@ -30,8 +30,6 @@ class BoardContainer extends Component {
       </Well>
     )
   }
-
-
 }
 
 const mapStateToProps = store => ({
