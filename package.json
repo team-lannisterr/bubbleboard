@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Visualize your data structure into a bubble map",
   "main": "index.js",
-  "babel":{
-    "plugins": ["transform-object-rest-spread"],
-    "ignore": ["/node_modules/"]
+  "babel": {
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
+    "ignore": [
+      "/node_modules/"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -46,6 +50,7 @@
     "react-force-graph": "^1.11.0",
     "react-p5-wrapper": "0.0.4",
     "react-redux": "^5.0.7",
+    "react-tree-graph": "^3.1.1",
     "redux": "^4.0.0",
     "relaxed-json": "^1.0.1",
     "webpack": "^4.17.1"

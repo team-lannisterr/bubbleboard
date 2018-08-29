@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Well } from 'react-bootstrap';
-import BubbleBoard from '../components/BubbleBoard.jsx'
-
+import BubbleBoard from '../components/BubbleBoard.jsx';
+import TreeBoard from '../components/treeBoard.jsx';
 
 
 class BoardContainer extends Component {
@@ -22,7 +22,11 @@ class BoardContainer extends Component {
   render() {
     return(
       <Well id="boardContainer">
+      { true ? (
         <BubbleBoard object = {this.props.inputData} name={'Test Data'}/>
+      ) : (
+        <TreeBoard object = {this.props.inputData} />
+      )}
       </Well>
     )
   }

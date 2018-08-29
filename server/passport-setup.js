@@ -1,17 +1,17 @@
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const keys = require('./keys');
-const User = require('./models/UserModel');
+// const passport = require('passport');
+// const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+// // const keys = require('./keys');
+// const User = require('./models/UserModel');
 
-passport.serializeUser((user, done) => {
-    done(null, user.id);
-});
+// passport.serializeUser((user, done) => {
+//     done(null, user.id);
+// });
 
-passport.deserializeUser((id, done) => {
-    User.findById(id).then((user) => {
-        done(null, user);
-    });
-});
+// passport.deserializeUser((id, done) => {
+//     User.findById(id).then((user) => {
+//         done(null, user);
+//     });
+// });
 
 passport.use(
     
@@ -38,3 +38,4 @@ passport.use(
         });
     })
 );
+
