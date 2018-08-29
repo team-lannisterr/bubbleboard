@@ -20,8 +20,15 @@ export const loadJSON = () => {
 };
 
 export const inputChange = (string) =>{
-  return{
+  return {
     type: types.INPUT_CHANGE,
     payload: string,
+  }
+}
+
+export const loadUserBoards = (arrOfUserObjs) => {
+  return {
+    type: types.LOAD_USER_BOARDS,
+    payload: arrOfUserObjs, 
   }
 }
