@@ -1,8 +1,8 @@
 import React from 'react';
+import UserBubbleBoard from '../coomponents/UserBubbleBoard.jsx'; 
 
 
-//The job item will have a button to check if the job has been accepted or not. 
-// 
+
 
 const BubbleBoardItem = (props) => {
   render() {
@@ -15,4 +15,4 @@ const BubbleBoardItem = (props) => {
       </div>
     ) 
   };
-};
+}:

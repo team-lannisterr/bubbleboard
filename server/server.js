@@ -12,6 +12,9 @@ const UserInfo = require('./models/UserModel.js');
 const app = express();
 
 
+
+
+
 //.keys file holds API keys, must add from google. 
 //also holds database link. slack @jc for more information
 
@@ -25,6 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/auth', authRoutes);
+
 app.use('/profile', profileRoutes);
 
 
@@ -33,7 +37,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-    db.find({}, ((err, items) => {
+    UserInfo.find({}, ((err, items) => {
         if(err) return res.status(500).send(err);
 
         res.status(200).send(items);
