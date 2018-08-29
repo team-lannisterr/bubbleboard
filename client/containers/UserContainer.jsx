@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import UserBubbleBoard from '../components/UserBubbleBoard';
-// import UserBubbleBoard from '../components/UserBubbleBoard';
+import UserBubbleBoard from '../components/UserBubbleBoard.jsx';
 //URL for UserData
 const URL = 'http://localhost:3000/data';
 
