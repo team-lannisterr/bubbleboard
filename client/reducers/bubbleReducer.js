@@ -18,19 +18,22 @@ const initialState = {
   renderBoard: false,
   rootName: '',
   numberOfBoards: 1,
+  inputJSONArray: [],
   boards: [],
   flipped: true
 };
 
 const bubbleReducer = (state = initialState, action) => {
   let numberOfBoards;
-  console.log(action)
 
   switch (action.type) {
     case types.LOAD_BUBBLES:
       let inputJSON = RJSON.parse(state.inputString);
+      let inputJSONArray = Object.assign([], state.inputJSONArray)
+      inputJSONArray.push(inputJSON)
       return {...state,
         inputJSON,
+        inputJSONArray,
         renderBoard: true
       };
     case types.INPUT_CHANGE:
@@ -45,7 +48,8 @@ const bubbleReducer = (state = initialState, action) => {
       case types.ADD_BOARD: 
       numberOfBoards = state.numberOfBoards + 1;
       return { ...state,
-        numberOfBoards
+        numberOfBoards,
+        renderBoard: true,
       };
       case types.HANDLE_CARD_FLIP:
       return { ...state,

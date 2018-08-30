@@ -32,11 +32,15 @@ body{
   height: 85vh;
 }
 
+
 #boardContainer {
   background: rgba(250, 250, 250, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 75vw;
   height: 85vh;
-  display:block; .perspective;
+  
 }
 
 #import {
