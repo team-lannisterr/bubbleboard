@@ -20,8 +20,8 @@ class BoardContainer extends Component {
     return(
       <Well id="boardContainer">
       { this.props.flipped ? (
-        <BubbleBoard object = {this.props.inputData} 
-        rootName={this.props.rootName} numberOfBoards={this.props.numberOfBoards} name={'Test Data'}/>
+        <BubbleBoard id="bubbleBoardContainer" object={this.props.inputData} rootName={this.props.rootName} numberOfBoards={this.props.numberOfBoards} 
+        inputJSONArray={this.props.inputJSONArray} name={'Test Data'}/>
       ) : (
         <TreeBoard object = {this.props.inputData} />
       )}
@@ -36,7 +36,9 @@ const mapStateToProps = store => ({
   hasNewInput: store.bubble.renderBoard,
   flipped: store.bubble.flipped,
   rootName: store.bubble.rootName,
-  numberOfBoards: store.bubble.numberOfBoards
+  numberOfBoards: store.bubble.numberOfBoards,
+  inputJSONArray: store.bubble.inputJSONArray,
+  
 });
 
 const mapDispatchToProps = dispatch => ({

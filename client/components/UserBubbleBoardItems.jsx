@@ -15,4 +15,4 @@ const BubbleBoardItem = (props) => {
       </div>
     ) 
   };
-}:
+}

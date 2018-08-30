@@ -13,7 +13,6 @@ class Sidebar extends Component {
   }
 
   render() {
-    console.log(this.props.rootName)
     const {} = this.props;
     return (
       <Well id="sidebar" className='flexColumn'>
