@@ -7,10 +7,11 @@ const BubbleBoard = props => {
     height: "800px"
   };
   
+  const forceGraphArray = [];
+  
   for (let i = 0; i < props.numberOfBoards; i += 1) {
     
     
-    const forceGraphArray = [];
     let nodes = [];
     let links = [];
 
