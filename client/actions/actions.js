@@ -13,9 +13,14 @@
 import * as types from '../constants/actionTypes'
 
 export const loadJSON = () => {
-  console.log("loadJSON action creator called");
   return {
   type: types.LOAD_BUBBLES,
+  }
+};
+
+export const handleCardFlip = () => {
+  return {
+  type: types.HANDLE_CARD_FLIP,
   }
 };
 
@@ -53,4 +58,7 @@ export const loadUserBubbleBoards = (object) =>  {
     payload: object, 
   }
 }
+
+
+
 
