@@ -202,6 +202,7 @@ const BubbleBoard = props => {
     height={600}
     nodeRelSize={10}
     linkWidth={8}
+    backgroundColor={'#000'}
     // linkColor="#F1CD7D"
     // nodeColor={{color: "#C56698"}}
     //runs function for every node 
