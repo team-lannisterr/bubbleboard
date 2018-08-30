@@ -8,16 +8,12 @@ const BubbleBoard = props => {
   };
   
   const forceGraphArray = [];
-  
+
   for (let i = 0; i < props.numberOfBoards; i += 1) {
     
-    
+ 
     let nodes = [];
     let links = [];
-
-
- 
-  
   
     const BubbleOb = (parent, offsetX, offsetY, style, data, ID, children = [], key) => {
       let bubble = {};
