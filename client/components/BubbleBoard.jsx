@@ -8,16 +8,12 @@ const BubbleBoard = props => {
   };
   
   const forceGraphArray = [];
-  
+
   for (let i = 0; i < props.numberOfBoards; i += 1) {
     
-    
+ 
     let nodes = [];
     let links = [];
-
-
- 
-  
   
     const BubbleOb = (parent, offsetX, offsetY, style, data, ID, children = [], key) => {
       let bubble = {};
@@ -166,35 +162,8 @@ const BubbleBoard = props => {
   }
 
   let el = (
-    <ForceGraph2D
-    graphData={bubbleData}
-    // backgroundColor="#003434"
-    width={1000}
-    height={600}
-    nodeRelSize={10}
-    linkWidth={8}
-    backgroundColor={'#000'}
-    // linkColor="#F1CD7D"
-    // nodeColor={{color: "#C56698"}}
-    //runs function for every node 
-    nodeCanvasObject={(node, ctx, globalScale) => {
-      const label = node.nodeLabel;
-      const fontSize = 12 / Math.sqrt(globalScale);
-      ctx.font = `${fontSize}px Sans-Serif`;
-      const textWidth = ctx.measureText(label).width;
-      const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 1); // some padding
-      ctx.fillStyle = "rgba(30,144,255 ,1 )";
-      ctx.fillRect(
-        node.x - bckgDimensions[0] / 2,
-        node.y - bckgDimensions[1] / 2,
-        ...bckgDimensions
-      );
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillStyle = node.color;
-      ctx.fillText(label, node.x, node.y);
-    }}
-  />
+    forceGraphArray
+
   );
   return el;
 };
